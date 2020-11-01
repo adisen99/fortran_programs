@@ -1,22 +1,24 @@
 ! Fortran95 code to determine the sum of two numbers
 ! given as user input.
 
-program addNumbers
-
-    implicit none
+PROGRAM addNumbers
     
-    ! Executable statements
-    real :: a, b, result
+    IMPLICIT NONE
 
-    print*, 'Type the value of a '
+    ! Executable statements
+
+    REAL :: a,b, result
+
+    print*, "Type the value of a -"
 
     read*, a
 
-    print*, 'Type the value of b'
+    print*, "Type the value of b -"
 
     read*, b
 
-    result = a+b
-    print*, 'The total is = ', result
+    result = a + b
 
-end program addNumbers
+    print*, "The sum of the given numbers = ", result
+
+END PROGRAM addNumbers
