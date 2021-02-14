@@ -9,7 +9,7 @@ program guess_my_number
    integer                          :: i, clock, count, n
    integer,dimension(:),allocatable :: seed
    
-   real,parameter :: rmax = 20
+   real,parameter :: rmax = 100
    
    !initialize random number generator:
    call random_seed(size=n)
@@ -24,12 +24,17 @@ program guess_my_number
    i = int((rmax-1.0)*rand + 1.0)    !i between 1 and rmax
    
    !get user guess:
-   write(*,'(A)') 'I''m thinking of a number between 1 and 20.'
+   write(*,'(A)') 'I''m thinking of a number between 1 and 100.'
    do   !loop until guess is correct
       write(*,'(A)',advance='NO') 'Enter Guess: '
       read(*,'(I5)') guess
-      if (guess==i) exit
-      write(*,*) 'Sorry, try again.'
+      if (guess==i) then 
+         exit
+      else if (guess > i) then 
+         write(*,*) 'Sorry, try again. the number is smaller than guess'
+      else
+         write(*,*) 'Sorry, try again. the number is larger than guess'
+      end if
    end do
    
    write(*,*) 'You''ve guessed my number!'
