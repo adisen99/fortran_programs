@@ -1,4 +1,4 @@
 #!/bin/sh
 
-gfortran -o out ./trig_iden.f95
+gfortran -o out ./recursive.f95
 ./out
