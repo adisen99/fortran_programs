@@ -33,7 +33,7 @@ program trig
     do i = 0,n
         !print 10, (x(i)/pi) * 180, sinx(i)
         !print 30, (x(i)/pi) * 180, cosx(i)
-        write(unit=1, fmt = 15) (x(i)/pi) * 180, tanx(i), cotx(i)
+        write(unit=1, fmt = 15) (x(i)/pi) * 180, secx(i), cscx(i)
     end do
 
     close(unit=1)

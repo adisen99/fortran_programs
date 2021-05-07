@@ -5,4 +5,4 @@ set title 'Main Plot'
 set xlabel 'X'
 set ylabel 'f(X)'
 
-plot "./plot.txt" u 1:2 title 'tan(x)', "./plot.txt" u 1:3 title 'cot(x)'
+plot "./plot.txt" u 1:2 title 'sec(x)', "./plot.txt" u 1:3 title 'cosec(x)'
