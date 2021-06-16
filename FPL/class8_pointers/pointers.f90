@@ -34,5 +34,6 @@ implicit none
    p1 = 10
    Print *, p1
    Print *, t2
+   Print *, t1
    
 end program pointerExample
